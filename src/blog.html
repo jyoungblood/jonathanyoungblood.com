@@ -1,0 +1,13 @@
+---
+layout: base.html
+title: JY blog articles
+---
+
+<div class="lh-copy f5">
+  <h2>BLOG ARTICLES</h2>
+  [fixit make this look like a restaurant menu]<br /><Br />
+  {% for article in articles %}
+  <a class="black-80 fw7" href="/blog/{{article.slug}}">{{ article.title.rendered }}</a>.................{{ article.date }}<br /><br />
+  {% endfor %}
+</div>
+

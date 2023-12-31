@@ -1,0 +1,19 @@
+---
+
+layout: base.html
+
+pagination:
+    data: articles
+    size: 1
+    alias: article
+title: fixit get page title from post {{ article.title.rendered }}
+permalink: "blog/{{ article.slug }}/"
+---
+
+<div class="lh-copy f5">
+  <h1 class="">{{ article.title.rendered }}</h1>
+  <div class="">
+    {{ article.content.rendered }}
+  </div>
+</div>
+
