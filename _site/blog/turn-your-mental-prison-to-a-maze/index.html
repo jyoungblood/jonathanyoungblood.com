@@ -14,60 +14,25 @@
   <meta name="author" content=''>
   <meta name="description" content="">
 
-  <!-- fixit what's the 2nd param? -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="/css/tachyons.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
 
-
-<style>
-  body {
-    /* 		font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif; */
-    font-family: Andale Mono, AndaleMono, Menlo-Regular, monospace;
-    /* 		background: black; */
-    /* 		color: white; */
-    font-size: 0.7rem;
-    color: rgba(0, 0, 0, 0.8);
-  }
-
-  .ref-links a {
-    display: block;
-    margin-bottom: 0.1rem;
-    padding: 0.25rem;
-    text-decoration: none;
-  }
-
-  .ref-links a,
-  .ref-links a:visited {
-    color: black;
-  }
-
-  .ref-links a:hover {
-    background: white;
-    /* 		color: rgba(0,0,0,0.9); */
-  }
-
-  .bg-cyan {
-    background: aquamarine;
-  }
-
-  ::selection {
-    background: rgba(0, 0, 00.8);
-    color: white;
-  }
-
-  ::-moz-selection {
-    background: #ffb7b7;
-    /* Gecko Browsers */
-  }
-
-  .hover-underline:hover{
-    text-decoration: underline;
-  }
-</style>
-
+  <style>
+    nav a:hover{
+      background: #fff;
+    }
+    nav a.current{
+      background: #fff;
+    }
+  </style>
 
 </head>
 
-<body class="pa4-ns pa3 bg-black-20">
+<body class="pa4-ns pa3 bg-black-20 pancake h-100">
 
   <header>
 
@@ -82,14 +47,15 @@
  -->
   <div>
     <!-- <a target="_blank" href="https://github.com/hxgf/jonathanyoungblood.com"><img class="w4" src="./images/horse-run.gif" /></a> -->
-    <a href="/" class="f1-ns f3 fw7 black-80  no-underline hover-underline">JONATHAN YOUNGBLOOD</a>
+    <a href="/" class="f3-ns f3 fw7 black-80  no-underline hover-underline">(∩｀-´)⊃━━ ☆ﾟ . * ･ ｡ ﾟ ( J Y )</a>
   </div>
 
-    <nav class="tr-ns mt0-ns mt3   f4-ns f5 fw5 ttu">
+    <nav class="tr-ns mt0-ns mt3 f5-ns f6 fw6 ttu">
       <!-- fixit highlight current -->
-      <a class="black-60 no-underline hover-underline ml3" href="/blog">blog</a>
-      <a class="black-60 no-underline hover-underline ml3" href="/projects">projects</a>
-      <a class="black-60 no-underline hover-underline ml3" href="/about">about</a>
+      <!-- -- /blog/turn-your-mental-prison-to-a-maze/ --  -->
+      <a class="black-80  no-underline ml3" href="/blog">blog</a>
+      <a class="black-80  no-underline ml3" href="/projects">projects</a>
+      <a class="black-80  no-underline ml3" href="/about">about</a>
     </nav>
 
 </div>
@@ -133,8 +99,16 @@
 
   </main>
 
-  <footer>
-
+  <footer class="f6 mt6 pb3">
+    <div class="bt bw3 b--black-05 pt3 ph1 black-30 flex justify-between">
+      <div class="lh-title">
+        &copy; 2024 J Youngblood.<br />
+        All Rights Reserved.
+      </div>
+      <div>
+        <a target="_blank" href="https://hxgf.io/"><img class="h3 o-30" src="/images/hxgf-bug.svg" /></a>
+      </div>
+    </div>
   </footer>
 
 </body>

@@ -1,0 +1,55 @@
+  body {
+    /* 		font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif; */
+    /* 		background: black; */
+    /* 		color: white; */
+    font-size: 0.7rem;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  body, body *{
+    font-family: 'Inter', sans-serif;
+  }
+
+  .mono {
+      font-family: Andale Mono, AndaleMono, Menlo-Regular, monospace;
+  }
+
+  .pancake {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .ref-links a {
+    display: block;
+    margin-bottom: 0.1rem;
+    padding: 0.25rem;
+    text-decoration: none;
+  }
+
+  .ref-links a,
+  .ref-links a:visited {
+    color: black;
+  }
+
+  .ref-links a:hover {
+    background: white;
+    /* 		color: rgba(0,0,0,0.9); */
+  }
+
+  .bg-cyan {
+    background: aquamarine;
+  }
+
+  ::selection {
+    background: rgba(0, 0, 00.8);
+    color: white;
+  }
+
+  ::-moz-selection {
+    background: #ffb7b7;
+    /* Gecko Browsers */
+  }
+
+  .hover-underline:hover {
+    text-decoration: underline;
+  }
