@@ -3,11 +3,69 @@ layout: base.html
 title: JY blog articles
 ---
 
+<style>
+  .blog-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .blog-list .article {
+    /* background-color: green; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .blog-list .article:after {
+    content: " ........................................................................................................................................................................................................................................................................................."
+  }
+  .blog-list .date {
+    /* background-color: red; */
+    flex-shrink: 0;
+  }
+</style>
+
+
 <div class="lh-copy f5">
-  <h2>BLOG ARTICLES</h2>
-  <!-- [fixit make this look like a restaurant menu]<br /><Br /> -->
+
+
+  <div class="mt3">
+    <a href="/feed">
+      <svg xmlns="http://www.w3.org/2000/svg" class="hover-o-100 icon icon-tabler icon-tabler-rss" width="20" height="20"
+        viewBox="0 0 24 24" stroke-width="3" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <path d="M4 11a9 9 0 0 1 9 9" />
+      </svg>
+    </a>
+  </div>
+
+  <h2 class="mt0 mb5 f2 lh-title ttu">From the Desk of Jonathan Youngblood:</h2>
+  
+
+
   {% for article in articles %}
-  <a class="black-80 fw7" href="/blog/{{article.slug}}">{{ article.title.rendered }}</a>.................{{ article.date }}<br /><br />
+
+<div class="mb4 pb3">
+
+  <div class="blog-list mb1 f5">
+    <div class="article">
+      <a class="black-80 fw7 no-underline hover-underline" href="/blog/{{article.slug}}">{{ article.title.rendered }}</a>
+    </div>
+    <div class="date">
+      {{ article.date_gmt }}
+    </div>
+  </div>
+
+  <div class="f6">Put a Subtitle Here if you want, it's fine for now i guess....</div>
+
+</div>
+
+
   {% endfor %}
+
+
+
+
+
 </div>
 

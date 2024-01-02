@@ -10,9 +10,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- fixit author tags? -->
+  <!-- fixit author tags? site vars? -->
   <meta name="author" content=''>
   <meta name="description" content="">
+
+  <!-- // fixit is this right? -->
+  <link rel="alternate" type="application/atom+xml" title="From the Desk of Jonathan Youngblood" href="https://jonathanyoungblood.com/feed" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,21 +23,22 @@
 
   <link rel="stylesheet" href="/css/tachyons.min.css">
   <link rel="stylesheet" href="/css/styles.css">
+  
 
   <style>
-    nav a:hover{
+    header a:hover{
       background: #fff;
     }
-    nav a.current{
+    header a.current{
       background: #fff;
     }
   </style>
 
 </head>
 
-<body class="pa4-ns pa3 bg-black-20 pancake h-100 w-100">
+<body class="pa3 pb1 bg-black-20 pancake h-100 w-100">
 
-  <header class="mw8 w-100 center">
+  <header class="mw8 w-100 center pt4">
 
 
 
@@ -47,14 +51,16 @@
  -->
   <div>
     <!-- <a target="_blank" href="https://github.com/hxgf/jonathanyoungblood.com"><img class="w4" src="./images/horse-run.gif" /></a> -->
-    <a href="/" class="f3-ns f3 fw7 black-80  no-underline hover-underline">(∩｀-´)⊃━━ ☆ﾟ . * ･ ｡ ﾟ ( J Y )</a>
+    <a href="/" class="f3-ns f3 fw7 black-80  no-underline hover-underline">
+      <span class="f5 pr4">(∩｀-´)⊃━━ ☆ﾟ . * ･ ｡ ﾟ </span>
+      ( J Y )</a>
   </div>
 
     <nav class="tr-ns mt0-ns mt3 f5-ns f6 fw6 ttu">
       <!-- -- /blog/ --  -->
-      <a class="black-80 current no-underline ml3" href="/blog">blog</a>
-      <a class="black-80  no-underline ml3" href="/projects">projects</a>
-      <a class="black-80  no-underline ml3" href="/about">about</a>
+      <a class="black-80 current no-underline ml4" href="/blog">blog</a>
+      <a class="black-80  no-underline ml4" href="/projects">projects</a>
+      <a class="black-80  no-underline ml4" href="/about">about</a>
     </nav>
 
 </div>
@@ -66,31 +72,162 @@
 
   <main class="mw8 w-100 center">
     
+<style>
+  .blog-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .blog-list .article {
+    /* background-color: green; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .blog-list .article:after {
+    content: " ........................................................................................................................................................................................................................................................................................."
+  }
+  .blog-list .date {
+    /* background-color: red; */
+    flex-shrink: 0;
+  }
+</style>
+
+
 <div class="lh-copy f5">
-  <h2>BLOG ARTICLES</h2>
-  <!-- [fixit make this look like a restaurant menu]<br /><Br /> -->
+
+
+  <div class="mt3">
+    <a href="/feed">
+      <svg xmlns="http://www.w3.org/2000/svg" class="hover-o-100 icon icon-tabler icon-tabler-rss" width="20" height="20"
+        viewBox="0 0 24 24" stroke-width="3" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M5 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <path d="M4 11a9 9 0 0 1 9 9" />
+      </svg>
+    </a>
+  </div>
+
+  <h2 class="mt0 mb5 f2 lh-title ttu">From the Desk of Jonathan Youngblood:</h2>
   
-  <a class="black-80 fw7" href="/blog/in-this-arid-wilderness-of-steel-and-stone-i-raise-up-my-voice-that-you-may-hear">In this arid wilderness of steel and stone I raise up my voice that you may hear</a>.................2024-01-01T16:54:05<br /><br />
+
+
   
-  <a class="black-80 fw7" href="/blog/turn-your-mental-prison-to-a-maze">Turn your mental prison to a maze</a>.................2023-12-31T13:52:08<br /><br />
+
+<div class="mb4 pb3">
+
+  <div class="blog-list mb1 f5">
+    <div class="article">
+      <a class="black-80 fw7 no-underline hover-underline" href="/blog/snakeskin-on-my-timbs-fuck-my-swag-they-took-that">Snakeskin on my Timbs, fuck my swag, they took that</a>
+    </div>
+    <div class="date">
+      2024-01-02T02:44:14
+    </div>
+  </div>
+
+  <div class="f6">Put a Subtitle Here if you want, it's fine for now i guess....</div>
+
+</div>
+
+
   
-  <a class="black-80 fw7" href="/blog/wordpress-11ty-lets-fucking-go">wordpress &#038; 11ty let&#8217;s fucking go!</a>.................2023-12-30T23:12:17<br /><br />
+
+<div class="mb4 pb3">
+
+  <div class="blog-list mb1 f5">
+    <div class="article">
+      <a class="black-80 fw7 no-underline hover-underline" href="/blog/in-this-arid-wilderness-of-steel-and-stone-i-raise-up-my-voice-that-you-may-hear">In this arid wilderness of steel and stone I raise up my voice that you may hear</a>
+    </div>
+    <div class="date">
+      2024-01-01T22:54:05
+    </div>
+  </div>
+
+  <div class="f6">Put a Subtitle Here if you want, it's fine for now i guess....</div>
+
+</div>
+
+
   
-  <a class="black-80 fw7" href="/blog/i-hate-being-alive-and-i-want-to-die">i hate being alive and i want to die</a>.................2023-12-30T23:10:50<br /><br />
+
+<div class="mb4 pb3">
+
+  <div class="blog-list mb1 f5">
+    <div class="article">
+      <a class="black-80 fw7 no-underline hover-underline" href="/blog/turn-your-mental-prison-to-a-maze">Turn your mental prison to a maze</a>
+    </div>
+    <div class="date">
+      2023-12-31T19:52:08
+    </div>
+  </div>
+
+  <div class="f6">Put a Subtitle Here if you want, it's fine for now i guess....</div>
+
+</div>
+
+
   
+
+<div class="mb4 pb3">
+
+  <div class="blog-list mb1 f5">
+    <div class="article">
+      <a class="black-80 fw7 no-underline hover-underline" href="/blog/wordpress-11ty-lets-fucking-go">wordpress &#038; 11ty let&#8217;s fucking go!</a>
+    </div>
+    <div class="date">
+      2023-12-30T23:12:17
+    </div>
+  </div>
+
+  <div class="f6">Put a Subtitle Here if you want, it's fine for now i guess....</div>
+
+</div>
+
+
+  
+
+<div class="mb4 pb3">
+
+  <div class="blog-list mb1 f5">
+    <div class="article">
+      <a class="black-80 fw7 no-underline hover-underline" href="/blog/i-hate-being-alive-and-i-want-to-die">i hate being alive and i want to die</a>
+    </div>
+    <div class="date">
+      2023-12-30T23:10:50
+    </div>
+  </div>
+
+  <div class="f6">Put a Subtitle Here if you want, it's fine for now i guess....</div>
+
+</div>
+
+
+  
+
+
+
+
+
 </div>
 
 
   </main>
 
-  <footer class="f6 mt6 pb3 mw8 w-100 center">
-    <div class="bt bw3 b--black-05 pt3 ph1 black-30 flex justify-between">
-      <div class="lh-title">
-        &copy; 2024 J Youngblood.<br />
-        All Rights Reserved.
+  <footer class="f6 mt6 mw8 w-100 center">
+    <div class="bt bw2 b--black-10 pv2 ph1 black-30 flex items-center justify-between">
+      <div class="">
+        <div class="f4">
+          I <span class="o-70" style="font-size: 90%;">&#9829;</span> JY
+        </div>
       </div>
       <div>
-        <a target="_blank" href="https://hxgf.io/"><img class="h3 o-30" src="/images/hxgf-bug.svg" /></a>
+
+        <div class="lh-copy f7 tr">
+          &copy; 2024 J Youngblood.<br />
+          All Rights Reserved.
+        </div>
+
+        <!-- <a target="_blank" href="https://hxgf.io/"><img class="h3 o-20" src="/images/hxgf-bug.svg" /></a> -->
       </div>
     </div>
   </footer>

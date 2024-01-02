@@ -4,15 +4,18 @@
 <head>
 
   <!-- fixit default site.title? -->
-  <title>{{ title | default: "Jonathan Youngblood — Software Engineer / Visual Artist" }}</title>
+  <title>{{ title }}</title>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- fixit author tags? -->
+  <!-- fixit author tags? site vars? -->
   <meta name="author" content='{{ site.author.name }}'>
   <meta name="description" content="{{ site.description }}">
+
+  <!-- // fixit is this right? -->
+  <link rel="alternate" type="application/atom+xml" title="From the Desk of Jonathan Youngblood" href="https://jonathanyoungblood.com/feed" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,21 +23,22 @@
 
   <link rel="stylesheet" href="/css/tachyons.min.css">
   <link rel="stylesheet" href="/css/styles.css">
+  
 
   <style>
-    nav a:hover{
+    header a:hover{
       background: #fff;
     }
-    nav a.current{
+    header a.current{
       background: #fff;
     }
   </style>
 
 </head>
 
-<body class="pa4-ns pa3 bg-black-20 pancake h-100 w-100">
+<body class="pa3 pb1 bg-black-20 pancake h-100 w-100">
 
-  <header class="mw8 w-100 center">
+  <header class="mw8 w-100 center pt4">
 
 
 
@@ -47,14 +51,16 @@
  -->
   <div>
     <!-- <a target="_blank" href="https://github.com/hxgf/jonathanyoungblood.com"><img class="w4" src="./images/horse-run.gif" /></a> -->
-    <a href="/" class="f3-ns f3 fw7 black-80  no-underline hover-underline">(∩｀-´)⊃━━ ☆ﾟ . * ･ ｡ ﾟ ( J Y )</a>
+    <a href="/" class="f3-ns f3 fw7 black-80  no-underline hover-underline">
+      <span class="f5 pr4">(∩｀-´)⊃━━ ☆ﾟ . * ･ ｡ ﾟ </span>
+      ( J Y )</a>
   </div>
 
     <nav class="tr-ns mt0-ns mt3 f5-ns f6 fw6 ttu">
       <!-- -- {{ page.url }} --  -->
-      <a class="black-80 {% if page.url == '/blog/' %}current{% endif %} no-underline ml3" href="/blog">blog</a>
-      <a class="black-80 {% if page.url == '/projects/' %}current{% endif %} no-underline ml3" href="/projects">projects</a>
-      <a class="black-80 {% if page.url == '/about/' %}current{% endif %} no-underline ml3" href="/about">about</a>
+      <a class="black-80 {% if page.url == '/blog/' %}current{% endif %} no-underline ml4" href="/blog">blog</a>
+      <a class="black-80 {% if page.url == '/projects/' %}current{% endif %} no-underline ml4" href="/projects">projects</a>
+      <a class="black-80 {% if page.url == '/about/' %}current{% endif %} no-underline ml4" href="/about">about</a>
     </nav>
 
 </div>
@@ -68,14 +74,21 @@
     {{ content }}
   </main>
 
-  <footer class="f6 mt6 pb3 mw8 w-100 center">
-    <div class="bt bw3 b--black-05 pt3 ph1 black-30 flex justify-between">
-      <div class="lh-title">
-        &copy; {% year %} J Youngblood.<br />
-        All Rights Reserved.
+  <footer class="f6 mt6 mw8 w-100 center">
+    <div class="bt bw2 b--black-10 pv2 ph1 black-30 flex items-center justify-between">
+      <div class="">
+        <div class="f4">
+          I <span class="o-70" style="font-size: 90%;">&#9829;</span> JY
+        </div>
       </div>
       <div>
-        <a target="_blank" href="https://hxgf.io/"><img class="h3 o-30" src="/images/hxgf-bug.svg" /></a>
+
+        <div class="lh-copy f7 tr">
+          &copy; {% year %} J Youngblood.<br />
+          All Rights Reserved.
+        </div>
+
+        <!-- <a target="_blank" href="https://hxgf.io/"><img class="h3 o-20" src="/images/hxgf-bug.svg" /></a> -->
       </div>
     </div>
   </footer>

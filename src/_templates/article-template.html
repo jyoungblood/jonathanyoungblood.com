@@ -11,7 +11,10 @@ permalink: "blog/{{ article.slug }}/"
 ---
 
 <div class="lh-copy f5">
-  <h1 class="">{{ article.title.rendered }}</h1>
+
+  <h2 class="mt3 f2 mb2 lh-title ttu">{{ article.title.rendered }}</h2>
+  <div class="mb5 f5">{{ article.date_gmt }}</div>
+
   <div class="">
     {{ article.content.rendered }}
   </div>

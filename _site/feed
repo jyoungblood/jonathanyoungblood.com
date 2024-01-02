@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="https://jonathanyoungblood.com/">
+  <title>From the Desk of Jonathan Youngblood</title>
+  <subtitle>Software developer muses about technology and navigating a world perpetually devolving further into chaos</subtitle>
+  <link href="https://jonathanyoungblood.com/feed" rel="self"/>
+  <link href="https://jonathanyoungblood.com/"/>
+  <updated>2024-01-02T04:54:33Z</updated>
+  <id>https://jonathanyoungblood.com/</id>
+  <author>
+    <name>Jonathan Youngblood</name>
+    <email>jonathan.youngblood@gmail.com</email>
+  </author>
+</feed>

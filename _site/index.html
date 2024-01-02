@@ -4,15 +4,18 @@
 <head>
 
   <!-- fixit default site.title? -->
-  <title>Jonathan Youngblood — Software Engineer / Visual Artist</title>
+  <title>Jonathan Youngblood — Software Engineer (among other things)</title>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- fixit author tags? -->
+  <!-- fixit author tags? site vars? -->
   <meta name="author" content=''>
   <meta name="description" content="">
+
+  <!-- // fixit is this right? -->
+  <link rel="alternate" type="application/atom+xml" title="From the Desk of Jonathan Youngblood" href="https://jonathanyoungblood.com/feed" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,21 +23,22 @@
 
   <link rel="stylesheet" href="/css/tachyons.min.css">
   <link rel="stylesheet" href="/css/styles.css">
+  
 
   <style>
-    nav a:hover{
+    header a:hover{
       background: #fff;
     }
-    nav a.current{
+    header a.current{
       background: #fff;
     }
   </style>
 
 </head>
 
-<body class="pa4-ns pa3 bg-black-20 pancake h-100 w-100">
+<body class="pa3 pb1 bg-black-20 pancake h-100 w-100">
 
-  <header class="mw8 w-100 center">
+  <header class="mw8 w-100 center pt4">
 
 
 
@@ -47,14 +51,16 @@
  -->
   <div>
     <!-- <a target="_blank" href="https://github.com/hxgf/jonathanyoungblood.com"><img class="w4" src="./images/horse-run.gif" /></a> -->
-    <a href="/" class="f3-ns f3 fw7 black-80  no-underline hover-underline">(∩｀-´)⊃━━ ☆ﾟ . * ･ ｡ ﾟ ( J Y )</a>
+    <a href="/" class="f3-ns f3 fw7 black-80  no-underline hover-underline">
+      <span class="f5 pr4">(∩｀-´)⊃━━ ☆ﾟ . * ･ ｡ ﾟ </span>
+      ( J Y )</a>
   </div>
 
     <nav class="tr-ns mt0-ns mt3 f5-ns f6 fw6 ttu">
       <!-- -- / --  -->
-      <a class="black-80  no-underline ml3" href="/blog">blog</a>
-      <a class="black-80  no-underline ml3" href="/projects">projects</a>
-      <a class="black-80  no-underline ml3" href="/about">about</a>
+      <a class="black-80  no-underline ml4" href="/blog">blog</a>
+      <a class="black-80  no-underline ml4" href="/projects">projects</a>
+      <a class="black-80  no-underline ml4" href="/about">about</a>
     </nav>
 
 </div>
@@ -358,18 +364,19 @@ drib?
   
   <div class="black-60 fw7 mb3 ttu f6">blog latest</div>
 
-  <a href="/blog/in-this-arid-wilderness-of-steel-and-stone-i-raise-up-my-voice-that-you-may-hear">In this arid wilderness of steel and stone I raise up my voice that you may hear</a><br />
-  2024-01-01T16:54:05
+  <a href="/blog/snakeskin-on-my-timbs-fuck-my-swag-they-took-that">Snakeskin on my Timbs, fuck my swag, they took that</a><br />
+  2024-01-01T20:44:14
   <div class="">
-  
+  <p>Green Hellcat mix matched with the jetpackStacks, rubberband man, land jugger, ten bandDamn, Stockholm City, frozen snakes, Gucci headbandDamn shawty, way too bad, went to hell and sent backLook back, look back, I don&#8217;t wanna look backShook head, loud pack, ridin&#8217; with a mousetrapSnakeskin on my Timbs, fuck my swag, they took that(Cops in the [&hellip;]</p>
+
   </div>
-  <a href="/blog/in-this-arid-wilderness-of-steel-and-stone-i-raise-up-my-voice-that-you-may-hear">read full article</a>
+  <a href="/blog/snakeskin-on-my-timbs-fuck-my-swag-they-took-that">read full article</a>
 
 </div>
 
 
 
-
+<!-- 
 <h2>DITHERED PHOTOS</h2>
 
 
@@ -404,18 +411,25 @@ drib?
   <div class="w-50-ns w-100 pl3-ns">
     <img src="/images/dx-trees.jpeg" />
   </div>
-</div>
+</div> -->
 
   </main>
 
-  <footer class="f6 mt6 pb3 mw8 w-100 center">
-    <div class="bt bw3 b--black-05 pt3 ph1 black-30 flex justify-between">
-      <div class="lh-title">
-        &copy; 2024 J Youngblood.<br />
-        All Rights Reserved.
+  <footer class="f6 mt6 mw8 w-100 center">
+    <div class="bt bw2 b--black-10 pv2 ph1 black-30 flex items-center justify-between">
+      <div class="">
+        <div class="f4">
+          I <span class="o-70" style="font-size: 90%;">&#9829;</span> JY
+        </div>
       </div>
       <div>
-        <a target="_blank" href="https://hxgf.io/"><img class="h3 o-30" src="/images/hxgf-bug.svg" /></a>
+
+        <div class="lh-copy f7 tr">
+          &copy; 2024 J Youngblood.<br />
+          All Rights Reserved.
+        </div>
+
+        <!-- <a target="_blank" href="https://hxgf.io/"><img class="h3 o-20" src="/images/hxgf-bug.svg" /></a> -->
       </div>
     </div>
   </footer>
