@@ -10,11 +10,10 @@ title: fixit get page title from post {{ article.title.rendered }}
 permalink: "blog/{{ article.slug }}/"
 ---
 
-
 <div class="mt4 mw8 w-100 center lh-copy f5">
 
-  <h2 class="mt3 f2 fw6 mb2 lh-title">{{ article.title.rendered }}</h2>
-  <div class="mb5 f5">{{ article.date_gmt }}</div>
+  <h2 class="mt3 mb2">{{ article.title.rendered }}</h2>
+  <h3 class="mt0 mb5">{{ article.date_gmt }}</h3>
 
   <div class="">
     {{ article.content.rendered }}

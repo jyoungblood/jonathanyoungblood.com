@@ -98,3 +98,42 @@
     filter: saturate(100%);
   }
 */
+
+
+
+    table.projects-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+  
+    table.projects-table thead {
+      /* border-bottom: 1px solid rgba(0,0,0,0.5); */
+    }
+  
+    /* .projects-table tbody tr{ */
+    table.projects-table tr {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    }
+  
+    table.projects-table td,
+    table.projects-table th {
+      padding: 1rem;
+    }
+  
+    table.projects-table tr:hover td {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+
+
+    .grid-gallery {
+      padding: 0.25rem;
+    }
+  
+    .grid-gallery img {
+      display: block;
+    }
+  
+    .grid-gallery .image-container {
+      padding: 0.25rem;
+    }
