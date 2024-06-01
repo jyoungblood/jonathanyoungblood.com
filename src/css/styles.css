@@ -2,12 +2,29 @@
     /* 		font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif; */
     /* 		background: black; */
     /* 		color: white; */
-    font-size: 0.7rem;
-    color: rgba(0, 0, 0, 0.8);
+    /* font-size: 0.7rem; */
+    /* color: rgba(0, 0, 0, 0.8); */
   }
 
   body, body *{
-    font-family: 'Inter', sans-serif;
+    /* font-family: system-ui, sans-serif; */
+    /* font-weight: normal; */
+
+    font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+    font-weight: normal;
+
+  }
+
+  a{
+    color: black;
+  }
+  a:hover{
+    /* color: white; */
+    /* background-color: black; */
+    /* text-decoration: none; */
+    /* background-color: lime; */
+    /* background-color: aquamarine; */
+    /* background: rgba(0,0,0,0.1); */
   }
 
   .mono {
@@ -53,3 +70,31 @@
   .hover-underline:hover {
     text-decoration: underline;
   }
+
+
+
+
+  nav a:hover {
+    /* background: #fff; */
+    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid #aefcee; */
+  }
+
+  nav a.current {
+    /* background: black; */
+    /* color: white; */
+    /* text-decoration: underline; */
+    border-bottom: 2px solid black;
+  }
+
+/* 
+  a.header-bug:hover {
+    text-decoration: none;
+  }
+  .header-bug img{
+    filter: saturate(0%);
+  }
+  .header-bug:hover img{
+    filter: saturate(100%);
+  }
+*/
