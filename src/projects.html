@@ -13,235 +13,31 @@ title: JY projects
 
 <div class="pa1">
 
-<table class="projects-table f6">
+<table class="projects-table lh-copy f6">
   <thead>
     <tr class="o-30">
       <th class="tl">Project</th>
-      <th class="tl">Descr</th>
-      <th class="tl">Link</th>
-      <th class="tl">Year</th>
+      <th class="tl">Type</th>
       <th class="tl">Status</th>
+      <th class="tl">Year</th>
+      <th class="tl">Descr</th>
     </tr>
   </thead>
   <tbody>
 
-    <tr>
-      <td>Project name</td>
-      <td>Description whatever longer part here</td>
-      <td>http://www.project.link</td>
-      <td>2014-2015</td>
-      <td>Active</td>
-    </tr>
+
+{% for project in projects %}
+
 <tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
+  <td>{% if project.url %}<a target="_blank" href="{{ project.url }}">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}</td>
+  <td>{{ project.type }}</td>
+  <td>{{ project.status }}</td>
+  <td>{{ project.year }}</td>
+  <td>{{ project.description }}</td>
 </tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
-<tr>
-  <td>Project name</td>
-  <td>Description whatever longer part here</td>
-  <td>http://www.project.link</td>
-  <td>2014-2015</td>
-  <td>Active</td>
-</tr>
+
+{% endfor %}
+
 
 
   </tbody>

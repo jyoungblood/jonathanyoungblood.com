@@ -87,17 +87,17 @@
     border-bottom: 2px solid black;
   }
 
-/* 
-  a.header-bug:hover {
+
+  /* a.header-bug:hover {
     text-decoration: none;
-  }
+  } */
   .header-bug img{
-    filter: saturate(0%);
+    filter: saturate(75%);
   }
   .header-bug:hover img{
     filter: saturate(100%);
   }
-*/
+
 
 
 
