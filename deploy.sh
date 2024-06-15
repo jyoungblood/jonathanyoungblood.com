@@ -17,6 +17,8 @@ SSH_WORK_PATH="/home/jonathanyoungblo/public_html"
 
 # add '-n' for dry run
 
+npx @11ty/eleventy
+
 # 755 folders & 644 files
 rsync -avhHP --delete-after --chmod=Du=rwx,Dg=rx,D=x,Fu=rwx,Fg=r,Fo=r --exclude '.htaccess' --exclude '.well-known' --exclude 'cgi-bin' _site/ -e "ssh -p $SSH_PORT" $SSH_USER@$SSH_SERVER:$SSH_WORK_PATH
 # --delete --delete-excluded --delete-before

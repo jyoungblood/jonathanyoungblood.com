@@ -1,4 +1,5 @@
 node_modules
 _site
 deploy.sh
-images
+src/images
+img
