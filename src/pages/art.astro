@@ -1,74 +1,82 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+const imageFiles = await Astro.glob("../assets/art/*");
+console.log(imageFiles);
+
+// imageFiles[]
+
+// import testimg from "../images/photos/410A0146.jpg";
+
+// const images = await Astro.glob("../assets/art/*").then((files) => {
+//   return files.map((file) => file.default);
+// });
+
+// console.log(images)
+
+// const _imgSrc = [
+
+// {
+//   title: 'image title',
+//   file: 'IMG_3553.jpeg',
+// },
+// {
+//   title: 'image title',
+//   file: 'IMG_3565 edit.jpg',
+// },
+// {
+//   title: 'image title',
+//   file: 'photo 4 copy.JPG',
+// },
+// {
+//   title: 'image title',
+//   file: '1 2.jpg',
+// },
+// {
+//   title: 'image title',
+//   file: '1.jpg',
+// },
+// {
+//   title: 'image title',
+//   file: '2 2.jpg',
+// },
+// {
+//   title: 'image title',
+//   file: '2.jpg',
+// },
+// {
+//   title: 'image title',
+//   file: '3.jpg',
+// },
+// {
+//   title: 'image title',
+//   file: '4.jpg',
+// },
+// {
+//   title: 'image title',
+//   file: '6.jpg',
+// },
+
+// ];
 ---
 
 <Layout title="Art - Jonathan Youngblood">
-
-
-<div class="grid-gallery flex flex-wrap">
-
-<!-- fixit images plugin -->
-  <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/1 2.jpg" target="_blank"><img src="/images/art/1 2.jpg"></a>
+  <div class="grid-gallery flex flex-wrap">
+    {
+      imageFiles.map((img) => (
+        <div class="image-container fuckthisshit w-50-ns w-100 ">
+          <a href={img.default.src} aria-label="" target="_blank">
+            <Image
+              src={img.default}
+              alt=""
+              sizes={`(min-width: 10em) 50vw, 100vw, ${img.default.width}px`}
+            />
+          </a>
+        </div>
+      ))
+    }
   </div>
-  <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/2 2.jpg" target="_blank"><img src="/images/art/2 2.jpg"></a>
-  </div>
-
-
-  <!-- <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/vhs-2.png"></a>
-  </div>
-  <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/vhs-1.png"></a>
-  </div> -->
-
-  <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/IMG_3553.jpeg" target="_blank"><img src="/images/art/IMG_3553.jpeg"></a>
-  </div>
-  <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/6.jpg" target="_blank"><img src="/images/art/6.jpg"></a>
-  </div>
-
-  <!-- <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/jyclockthing.png"></a>
-  </div>
-  <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/IMG_3565 edit.jpg"></a>
-  </div> -->
-  <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/2.jpg" target="_blank"><img src="/images/art/2.jpg"></a>
-  </div>
-
-  <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/photo 4 copy.JPG" target="_blank"><img src="/images/art/photo 4 copy.JPG"></a>
-  </div>
-
-  <!-- <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/4.jpg"></a>
-  </div>
-  <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/3.jpg"></a>
-  </div> -->
-  <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/1.jpg" target="_blank"><img src="/images/art/1.jpg"></a>
-  </div>
-  <div class="image-container fuckthisshit w-50-ns w-100 ">
-    <a href="/images/art/IMG_0041.JPG" target="_blank"><img src="/images/art/IMG_0041.JPG"></a>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
 </Layout>
 
 <style>
