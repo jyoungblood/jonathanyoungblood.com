@@ -11,8 +11,11 @@
     /* font-weight: normal; */
 
     font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-    font-weight: normal;
 
+  }
+
+  body {
+    font-weight: normal;
   }
 
   a{
@@ -137,3 +140,7 @@
     .grid-gallery .image-container {
       padding: 0.25rem;
     }
+
+
+
+
