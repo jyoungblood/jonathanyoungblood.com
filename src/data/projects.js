@@ -250,7 +250,7 @@ export const projects = [
   {
     title: "Ocean Companies MST",
     url: "https://port164.com/",
-    description: "",
+    description: "Commercial real estate developer's public web site with profiles for properties and online tenant application system",
     tags: ["client"],
     portfolio: true,
     year: "2018-",
@@ -265,10 +265,10 @@ export const projects = [
   {
     title: "BLU",
     url: "https://blu.oceancompaniesok.com/",
-    description: "",
+    description: "Inventory management system and internal back office for commercial real estate developer",
     tags: ["client"],
     portfolio: true,
-    year: "",
+    year: "2017-",
     status: "Ongoing",
   },
 
@@ -280,10 +280,10 @@ export const projects = [
   {
     title: "NRHA",
     url: "https://nrha.com/",
-    description: "",
+    description: "Equestrian sports association web site (and various internal projects)",
     tags: ["client"],
     portfolio: true,
-    year: "",
+    year: "2018-",
     status: "Ongoing",
   },
 
@@ -294,10 +294,10 @@ export const projects = [
   {
     title: "Stallion Manager",
     url: "https://stallionmanager.equipost.com/",
-    description: "",
+    description: "Private system to manage stallion breeding contracts and a public profiles API",
     tags: ["client"],
     portfolio: true,
-    year: "",
+    year: "2023-",
     status: "Ongoing",
   },
 
