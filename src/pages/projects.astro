@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectsTable from "../components/ProjectsTable.astro";
+
+// const imageFiles = await Astro.glob("../assets/photos/*");
+
+import { projects as _projects } from "../data/projects.js";
+const projects = _projects.filter((project) => !project.tags.includes("client") && !project.hidden);
+---
+
+<!-- 
+// fixit maybe				
+// just show the favorites at first
+	// then have a button that's like SHOW ME ALL OF THEM				
+
+// put everything in these categories:
+/*
+  - Current (active/recent) projects (visible)
+  - Old projects / archive
+  - Could-be projects (in the works, eventual/potential*)
+  - Portfolio (hidden, able to show it off to people who need to see  (optional client services))
+*/ -->
+<Layout title="Projects - Jonathan Youngblood">
+  <div class="pa2">
+    <ProjectsTable projects={projects} />
+  </div>
+</Layout>

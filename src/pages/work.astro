@@ -1,0 +1,76 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import ProjectsTable from "../components/ProjectsTable.astro";
+import { projects as _projects } from "../data/projects.js";
+const projects = _projects.filter((project) => project.portfolio);
+---
+
+<Layout title="Photos - Jonathan Youngblood">
+  <div class="mt4 mw8-ns w-100 center lh-copy f5 pa0-ns pa3">
+    <div class="flex-ns justify-between mb4 pb2">
+      <div class="pr6">
+        <h2 class="normal">Jonathan Youngblood</h2>
+
+        <div>
+          <br />
+          <p>Generalist software developer and open source library author.</p>
+
+          <p>
+            I love building custom portals and dashboards, APIs, internal tools,
+            and of course OSS libraries.
+          </p>
+          <p>
+            In addition to custom development, I consult with companies and
+            organizations, helping achieve success for web sites and custom
+            applications, data analysis and reporting, and more.
+          </p>
+
+          <br /><br />
+          <br /><br />
+        </div>
+
+        <h2 class="normal">Current Favorite Technologies</h2>
+        <br />
+        Astro, Tailwind, PHP, MySQL, Node.js, JavaScript, Bash, Laravel
+        <br /><br /><br />
+      </div>
+
+      <div>
+        <h2 class="normal">Links</h2>
+
+        <br />
+
+        <a href="/Jonathan Youngblood - resume.pdf" download>Resume (PDF)</a>
+
+        <br /><br />
+        <a href="mailto:jonathan.youngblood@gmail.com"
+          >jonathan.youngblood@gmail.com</a
+        >
+        <br /><br />
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/jonathanyoungblood/"
+          >Linkedin @jonathanyoungblood</a
+        >
+        <br /><br />
+        <a target="_blank" href="https://github.com/jyoungblood"
+          >Github @jyoungblood</a
+        >
+        <br /><br />
+        <a target="_blank" href="https://jyoungblood.github.io/"
+          >jyoungblood.github.io</a
+        >
+
+        <br /><br /><br />
+      </div>
+    </div>
+
+    <br /><br />
+    <h2 class="normal">Select Work</h2>
+    <br />
+    <ProjectsTable projects={projects} />
+
+    <!-- <img src="/images/bio-desk.jpg" /> -->
+  </div>
+</Layout>

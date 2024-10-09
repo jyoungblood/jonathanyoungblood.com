@@ -64,6 +64,13 @@ const { title } = Astro.props;
           <a
             class:list={[
               "f6 pb1 mh2 no-underline",
+              Astro.url.pathname.includes("/projects") ? "current" : "",
+            ]}
+            href="/projects">Projects</a
+          >
+          <a
+            class:list={[
+              "f6 pb1 mh2 no-underline",
               Astro.url.pathname.includes("/about") ? "current" : "",
             ]}
             href="/about">About</a
