@@ -146,8 +146,14 @@ export const projects = [
 
 
   
-
-
+  {
+    title: "Cassett.es",
+    url: "https://cassett.es/",
+    description: "Mixtape series with some of my favorite songs",
+    tags: ["sound"],
+    year: "2013",
+    status: "Complete",
+  },
 
   {
     title: "Analog Music",
