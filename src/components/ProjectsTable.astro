@@ -6,6 +6,7 @@ const { projects } = Astro.props;
   <table class="w-100 collapse pv2 ph3 f6">
     <thead>
       <tr class="bb b--black">
+        <!-- <th class="pv2 ph3 tl f7 fw7 ttu"></th> -->
         <th class="pv2 ph3 tl f7 fw7 ttu">TITLE</th>
         <th class="pv2 ph3 tl f7 fw7 ttu">TAGS</th>
         <th class="pv2 ph3 tl f7 fw7 ttu">YEAR</th>
@@ -19,27 +20,49 @@ const { projects } = Astro.props;
             class="bb b--black hover-bg-black-05 pointer"
             onclick={`window.open('${project.url}', '_blank')`}
           >
-            <td class="pv3 ph3">
-              <div class="flex items-center">
-                <span>
-                  <b>{project.title}</b>
-                </span>
-                <svg
-                  class="w1 ml1"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7 17L17 7M17 7H8M17 7V16"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+            {/* <td class="pa3 w3">
+              {project.icon && (
+                  <img
+                    src={project.icon}
+                    alt={`${project.title} icon`}
+                    class="w-100"
                   />
-                </svg>
+              )}
+            </td> */}
+            <td class="pv3 ph3 relative">
+              <div class="">
+                <div class="flex items-center">
+                  <span>
+                    <b>{project.title}</b>
+                  </span>
+                  <svg
+                    class="w1 ml1"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 17L17 7M17 7H8M17 7V16"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <span class="f7 lh-copy">{project.description}</span>
               </div>
-              <span class="f7 lh-copy">{project.description}</span>
+              
+              {project.icon && (
+
+                <div class="dbh absolute w-100 top-1 right-0 tr">
+                  <img
+                    src={project.icon}
+                    alt={`${project.title} icon`}
+                    class="h2"
+                  />
+                </div>
+              )}
             </td>
             <td class="pv2 ph3">
               {project.tags.map((tag) => (
@@ -56,7 +79,10 @@ const { projects } = Astro.props;
 </div>
 
 <style>
-  .hover-bg-black-05:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+  .dbh {
+    display: none;
+  }
+  tr:hover .dbh {
+    display: block;
   }
 </style>

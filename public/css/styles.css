@@ -144,3 +144,10 @@
 
 
 
+.hover-bg-black-05:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* .hover-db:hover {
+  display: block !important;
+} */

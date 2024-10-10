@@ -7,8 +7,11 @@ export const projects = [
   //   url: "",
   //   description: "",
   //   tags: [],
+  //   collections: [],
   //   year: "",
   //   status: "",
+  //   hidden: false,
+  //   icon: false,
   // },
 
 
@@ -18,10 +21,12 @@ export const projects = [
     title: "Stereo Internet Toolkit",
     url: "https://stereotk.com/",
     description: "Full-stack web development framework for quickly building sites, APIs, and applications",
+    // description: "Brutalist web dev tool kit for quickly building sites and APIs .. we've had to build A LOT of the same kinds of things over and over over the past decade or so, and this framework has slowly developed to make things easier. now that it's solidified as a tool, we're putting effort into writing documentation and making it easy for people to learn so that they, too, may benefit from these solutions. it's like the easiest way to make web sites with php! .. primitive/generic - simplified express concept for presentation (user-facing) web application layer - designed to make routing and display a breeze",
     tags: ["oss"],
-    portfolio: true,
+    collections: ["portfolio"],
     year: "2010-",
     status: "Current",
+    icon: "/images/stereo-headphones-black-big.png",
   },
 
 
@@ -32,7 +37,7 @@ export const projects = [
     url: "https://vphp.dev/",
     description: "Vanilla PHP packages with no dependencies",
     tags: ["oss"],
-    portfolio: true,
+    collections: ["portfolio"],
     year: "2023-",
     status: "Ongoing",
   },
@@ -46,6 +51,7 @@ export const projects = [
     url: "https://jyoungblood.github.io/",
     description: "Open source project catalog",
     tags: ["oss"],
+    collections: [],
     year: "2024",
     status: "Ongoing",
   },
@@ -58,9 +64,12 @@ export const projects = [
     title: "Darkwave",
     url: "https://darkwave.ltd/",
     description: "Pragmatic application runtime",
+    // description: "'full stack' batteries-included toolkit for building practical data-driven web applications"
     tags: ["oss"],
+    collections: [],
     year: "2017-",
     status: "Ongoing",
+    icon: "/images/dw-triangles-transparent.png",
   },
 
 
@@ -71,8 +80,8 @@ export const projects = [
     title: "Pocket Docs",
     url: "https://jyoungblood.github.io/pocketdocs/",
     description: "Attractive template for writing single-page documentation with semantic HTML",
-    portfolio: true,
     tags: ["oss"],
+    collections: ["portfolio"],
     year: "2024",
     status: "Complete",
   },
@@ -86,6 +95,7 @@ export const projects = [
     url: "https://slime.technology/",
     description: "Starter kit for building web apps with Slim 4 with Handlebars templates",
     tags: ["oss"],
+    collections: [],
     year: "2022",
     status: "Complete",
   },
@@ -94,14 +104,12 @@ export const projects = [
   
 
 
-
-
   {
     title: "jQuery Digital Sign",
     url: "https://github.com/jyoungblood/jquery-digital-sign",
     description: "Simple digital signage solution built with jQuery and Tachyons",
     tags: ["oss"],
-    portfolio: true,
+    collections: ["portfolio"],
     year: "2023",
     status: "Complete",
   },
@@ -111,8 +119,9 @@ export const projects = [
     title: "Smoke.js",
     url: "https://smoke.js.org/",
     description: "Framework-agnostic styled alert system for Javascript",
+    // description: "a modern classic: framework-agnostic styled alert system for javascript. ★ 936 github stars! ★",
     tags: ["oss"],
-    portfolio: true,
+    collections: ["portfolio"],
     year: "2011",
     status: "Complete",
   },
@@ -126,9 +135,10 @@ export const projects = [
     url: "https://github.com/jyoungblood/scratch",
     description: "",
     tags: ["oss"],
-    hidden: true,
+    collections: [],
     year: "",
     status: "Complete",
+    hidden: true,
   },
 
 
@@ -139,9 +149,10 @@ export const projects = [
     url: "https://github.com/jyoungblood/0x00",
     description: "",
     tags: ["oss"],
-    hidden: true,
+    collections: [],
     year: "",
     status: "Complete",
+    hidden: true,
   },
 
 
@@ -151,8 +162,10 @@ export const projects = [
     url: "https://cassett.es/",
     description: "Mixtape series with some of my favorite songs",
     tags: ["sound"],
+    collections: [],
     year: "2013",
     status: "Complete",
+    icon: "/images/cassettes-tape.svg",
   },
 
   {
@@ -160,6 +173,7 @@ export const projects = [
     url: "https://analog-music.com/",
     description: "Record label for music projects from me and my friends",
     tags: ["sound"],
+    collections: [],
     year: "1999-",
     status: "Upcoming",
   },
@@ -173,8 +187,10 @@ export const projects = [
     url: "https://dvst.cc/",
     description: "Aesthetic digest, internet scrapbook",
     tags: ["publication"],
+    collections: [],
     year: "2020-",
     status: "Upcoming",
+    icon: "/images/dvst-thin-transparent.png",
   },
 
 
@@ -186,6 +202,7 @@ export const projects = [
     url: "https://antipatterns.tv/",
     description: "Web zine for developers",
     tags: ["publication"],
+    collections: [],
     year: "2024",
     status: "Upcoming",
   },
@@ -198,6 +215,7 @@ export const projects = [
     url: "https://field-recordings.com/",
     description: "Collection of ambient soundscapes",
     tags: ["sound"],
+    collections: [],
     year: "2015-",
     status: "Upcoming",
   },
@@ -213,6 +231,7 @@ export const projects = [
     url: "https://ucqb.org/",
     description: "Universal Church of Quantum Benevolence",
     tags: ["social"],
+    collections: [],
     year: "2024",
     status: "Upcoming",
   },
@@ -225,6 +244,7 @@ export const projects = [
     url: "https://scnlns.com/",
     description: "Current music project",
     tags: ["sound"],
+    collections: [],
     year: "2019-",
     status: "Upcoming",
   },
@@ -238,9 +258,11 @@ export const projects = [
     url: "https://hxgf.io/",
     description: "",
     tags: [],
-    hidden: true,
+    collections: [],
     year: "",
     status: "Ongoing",
+    icon: "/images/hxgf-bug.png",
+    hidden: true,
   },
 
 
@@ -258,7 +280,7 @@ export const projects = [
     url: "https://port164.com/",
     description: "Commercial real estate developer's public web site with profiles for properties and online tenant application system",
     tags: ["client"],
-    portfolio: true,
+    collections: ["portfolio"],
     year: "2018-",
     status: "Ongoing",
   },
@@ -273,7 +295,7 @@ export const projects = [
     url: "https://blu.oceancompaniesok.com/",
     description: "Inventory management system and internal back office for commercial real estate developer",
     tags: ["client"],
-    portfolio: true,
+    collections: ["portfolio"],
     year: "2017-",
     status: "Ongoing",
   },
@@ -288,7 +310,7 @@ export const projects = [
     url: "https://nrha.com/",
     description: "Equestrian sports association web site (and various internal projects)",
     tags: ["client"],
-    portfolio: true,
+    collections: ["portfolio"],
     year: "2018-",
     status: "Ongoing",
   },
@@ -302,7 +324,7 @@ export const projects = [
     url: "https://stallionmanager.equipost.com/",
     description: "Private system to manage stallion breeding contracts and a public profiles API",
     tags: ["client"],
-    portfolio: true,
+    collections: ["portfolio"],
     year: "2023-",
     status: "Ongoing",
   },
@@ -316,46 +338,17 @@ export const projects = [
     url: "https://csspentagram.com/",
     description: "It's a pentagram. Made with CSS.",
     tags: [],
-    hidden: true,
+    collections: [],
     year: "2014",
     // status: "Complete",
     status: "Complete",
+    hidden: true,
   },
 
 
 
 
 
-		// 		{
-		// 			title: "STEREO",
-		// 			url: "https://stereotk.com/",
-		// 			description: "Brutalist web dev tool kit for quickly building sites and APIs .. we've had to build A LOT of the same kinds of things over and over over the past decade or so, and this framework has slowly developed to make things easier. now that it's solidified as a tool, we're putting effort into writing documentation and making it easy for people to learn so that they, too, may benefit from these solutions. it's like the easiest way to make web sites with php! .. primitive/generic - simplified express concept for presentation (user-facing) web application layer - designed to make routing and display a breeze",
-		// 			tags: [ ],
-    // year: "2009-",
-		// 			type: "oss",
-		// 			status: "Active",
-		// 			icon: "./images/stereo-headphones-black-big.png",
-		// 		},
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-		// 		{
-		// 			title: "cassett.es",
-		// 			url: "https://cassett.es/",
-		// 			description: "Mix tapes of songs we like. Used to be a podcast, but there was just never enough time to do it consistently. There will be new mixes one day (already have a few in the can, just not posted). Site redesigned in 2021.",
-		// 			tags: [ ],
-    // year: "2013-2015",
-		// 			type: "",
-		// 			status: "Archived",
-
-		// 		},
 				
 				
 				
@@ -367,17 +360,6 @@ export const projects = [
 				
 				
 				
-		// 		{
-		// 			title: "darkwave",
-		// 			url: "https://darkwave.ltd/",
-		// 			description: " \"full-stack\" framework for building practical data-driven web applications (it's like wordpress but for web apps)",
-
-		// 			tags: [ ],
-    // year: "2013-",
-		// 			type: "oss",
-		// 			status: "Active",
-		// 			icon: "./images/dw-triangles-transparent.png",
-		// 		},
 				
 				
 				
@@ -389,23 +371,6 @@ export const projects = [
 				
 				
 				
-		// 		{
-		// 			title: "DVST",
-		// 			url: "https://dvst.cc/",
-		// 			description: "kinda like a web zine? place where i'm putting links of all the interesting stuff i find",
-
-
-		// 			tags: [ ],
-    // year: "2018-",
-		// 			status: "Active",
-		// 			icon: "./images/dvst-thin-transparent.png",
-		// 		},
-
-
-
-
-
-
 
 
 
@@ -453,182 +418,6 @@ export const projects = [
 		// 			type: " ",
 		// 			status: " ",
 		// 		},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		// 		{
-		// 			title: "css pentagram",
-		// 			url: "https://csspentagram.hxgf.io/",
-		// 			description: "it's a pentagram. made with css. i used to have the domain csspentagram.com, but no mas...",
-		// 			tags: [ ],
-    // year: " ",
-		// 			type: " ",
-		// 			status: " ",
-		// 		},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		// 		{
-		// 			title: "analog music publishing",
-		// 			url: "http://analog.hxgf.io/",
-		// 			description: " ",
-		// 			tags: [ ],
-    // year: " ",
-		// 			type: " ",
-		// 			status: " ",
-		// 		},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		// 		{
-		// 			title: "field recordings",
-		// 			url: "http://fieldrecordings.hxgf.io/",
-		// 			description: " ",
-		// 			tags: [ ],
-    // year: " ",
-		// 			type: " ",
-		// 			status: " ",
-		// 		},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				
-
-
-		// 		{
-		// 			title: "smokeJS",
-		// 			url: "https://smoke.js.org",
-		// 			description: "a modern classic: framework-agnostic styled alert system for javascript. ★ 936 github stars! ★",
-		// 			tags: [ ],
-    // year: " ",
-		// 			type: " ",
-		// 			status: " ",
-		// 		},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		// 		{
-		// 			title: "scratch",
-		// 			url: "https://scratch.hxgf.io",
-		// 			description: "html boilerplate + css/js primitives (tachyons + alpine)",
-		// 			tags: [ ],
-    // year: " ",
-		// 			type: " ",
-		// 			status: " ",
-		// 		},
-
-
-
-
-
-
-
-		// 		{
-		// 			title: "scanlines",
-		// 			url: "https://scanlines.hxgf.io",
-		// 			description: " ",
-		// 			tags: [ ],
-    // year: " ",
-		// 			type: " ",
-		// 			status: " ",
-		// 		},
-
-
-
-
-
-		// 		{
-		// 			title: "ucqb",
-		// 			url: "https://ucqb.hxgf.io",
-		// 			description: " ",
-		// 			tags: [ ],
-    // year: " ",
-		// 			type: " ",
-		// 			status: " ",
-		// 		},
-
-
-
-
-
-
-
-
 
 
 
