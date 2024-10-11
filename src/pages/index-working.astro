@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NewsletterSignup from "../components/NewsletterSignup.astro";
+import { projects as _projects } from "../data/projects.js";
+const projects = _projects.filter((project) =>
+  project.collections.includes("home")
+);
+---
+
+<Layout title="Jonathan Youngblood">
+  <!-- <div class="mw8-ns center pa3"> -->
+  <div class="pa3">
+    <div class="flex flex-wrap">
+      <div class="w-50-ns tc">
+        <img class="dib w-50" src="/images/art-pencil-triangles.png" />
+
+        <br /><br />
+        I LOVE YOU
+      </div>
+
+      <div class="w-50-ns">
+        <div class="pa3 bg-white lh-copy f6 fw4">
+          <p class="mt0">
+            Jonathan Youngblood is a generalist software developer and open
+            source library author. He works with companies and organizations to
+            help them achieve success with web sites and custom applications,
+            data analysis and reporting, and more.
+          </p>
+
+          <p class="mb0">
+            In addition to his work in software development, Jonathan is also an
+            accomplished artist, photographer, and musician. His creative
+            pursuits inform and complement his technical work, bringing a unique
+            perspective to his projects and fostering innovation across
+            disciplines.
+          </p>
+        </div>
+
+        <br /><br />
+
+        <h3 class="normal">SOME PROJECTS</h3>
+        <div class="flex flex-wrap nl2 nr2">
+          {
+            projects.map((project) => (
+              <div class="w-50 ph2 mb3">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  class="db no-underline bg-black white pa3 h-100"
+                >
+                  {project.title}
+                </a>
+              </div>
+            ))
+          }
+        </div>
+
+        <NewsletterSignup />
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+      <h1 class="normal">JONATHAN YOUNGBLOOD</h1>
+
+      <h2 class="normal">Is always hard at work</h2>
+
+
+
+
+    <!-- 
+  <div class="dt h-100 center">
+    <div class="dtc v-mid lh-copy tc">
+
+      <div class="f4">JONATHAN YOUNGBLOOD</div>
+      <br /><br />
+
+      <div class="flex flex-wrap items-center">
+        <div class="pr3 pt4">
+          <img class="dib w5" src="/images/art-pencil-triangles.png" />
+
+          I LOVE YOU
+        </div>
+
+        <div class="pl3">
+          <NewsletterSignup />
+        </div>
+      </div>
+
+ -->
+</Layout>

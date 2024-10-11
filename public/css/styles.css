@@ -1,4 +1,7 @@
-  body {
+html, body{
+  height: 100vh;
+}
+body {
     /* 		font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif; */
     /* 		background: black; */
     /* 		color: white; */
