@@ -1,10 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ProjectsTable from "../components/ProjectsTable.astro";
-import { projects as _projects } from "../data/projects.js";
-const projects = _projects.filter((project) =>
-  project.collections.includes("portfolio")
-);
+// import { projects as _projects } from "../data/projects.js";
+// const projects = _projects.filter((project) =>
+//   project.collections.includes("portfolio")
+// );
+import { getCollection } from "astro:content";
+const allProjects = await getCollection("projects");
+const projects = allProjects
+  .filter(
+    (project) => project.data.collections.includes("portfolio") && !project.data.hidden
+  )
+  .sort((a, b) => a.data.sort_order - b.data.sort_order);
 ---
 
 <Layout
@@ -17,10 +24,10 @@ const projects = _projects.filter((project) =>
 
         <div class="pr0-ns pr3">
           <br />
-          Full-stack generalist software developer and open source library author.
+          Full-stack generalist software developer and open source library author. I've worked with a variety of platforms, but I'm focused on building for the web.
           <br /><br />
 
-          I love building custom portals and dashboards, APIs, internal tools,
+          I love making custom portals and dashboards, APIs, internal tools,
           and of course OSS libraries.
           <br /><br />
 
@@ -41,7 +48,8 @@ const projects = _projects.filter((project) =>
       <div>
         <h2 class="normal">
           <span class="db dn-ns">Contact</span><span class="dn db-ns"
-            >&nbsp;</span>
+            >&nbsp;</span
+          >
         </h2>
 
         <br />

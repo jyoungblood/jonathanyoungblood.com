@@ -1,9 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ProjectsTable from "../components/ProjectsTable.astro";
-import { projects as _projects } from "../data/projects.js";
-
-const projects = _projects.filter((project) => !project.tags.includes("client") && !project.hidden);
+import { getCollection } from "astro:content";
+const allProjects = await getCollection("projects");
+const projects = allProjects.filter(
+  (project) => !project.data.tags.includes("client") && !project.data.hidden
+).sort((a, b) => a.data.sort_order - b.data.sort_order);
 ---
 
 <Layout title="Projects - Jonathan Youngblood">

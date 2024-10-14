@@ -2,12 +2,10 @@
 const { projects } = Astro.props;
 
 // ex usage
+
 // import ProjectsTable from "../components/ProjectsTable.astro";
-// import { getCollection } from "astro:content";
-// const allProjects = await getCollection("projects");
-// const projects = allProjects.filter(
-//   (project) => !project.data.tags.includes("client") && !project.data.hidden
-// ).sort((a, b) => a.data.sort_order - b.data.sort_order);
+// import { projects as _projects } from "../data/projects.js";
+// const projects = _projects.filter((project) => !project.tags.includes("client") && !project.hidden);
 ---
 
 <div class="overflow-x-auto">
@@ -22,13 +20,11 @@ const { projects } = Astro.props;
       </tr>
     </thead>
     <tbody>
-      <!-- onclick={`window.open('${project.data.url}', '_blank')`} -->
-      <!-- onclick={`window.location.href = '/projects/${project.slug}'`} -->
       {
         projects.map((project) => (
           <tr
             class="bb b--black-80 hover-bg-black-05 pointer"
-            onclick={`window.open('${project.data.url}', '_blank')`}
+            onclick={`window.open('${project.url}', '_blank')`}
           >
             {/* <td class="pa3 w3">
               {project.icon && (
@@ -42,7 +38,7 @@ const { projects } = Astro.props;
             <td class="relative">
               <div class="ph3-ns pv3-ns ph1 pv3">
                 <div class="flex items-center mb1-ns">
-                  <span class="f5-ns f6 fw7">{project.data.title}</span>
+                  <span class="f5-ns f6 fw7">{project.title}</span>
                   {/* <svg
                     class="w1 ml1"
                     viewBox="0 0 24 24"
@@ -58,31 +54,29 @@ const { projects } = Astro.props;
                     />
                   </svg> */}
                 </div>
-                <span class="lh-title f6-ns f7">
-                  {project.data.description}
-                </span>
+                <span class="lh-title f6-ns f7">{project.description}</span>
               </div>
 
-              {project.data.icon && (
+              {project.icon && (
                 <div class="dbh absolute w-100 top-1 right-0 tr">
                   <img
-                    src={project.data.icon}
-                    alt={`${project.data.title} icon`}
+                    src={project.icon}
+                    alt={`${project.title} icon`}
                     class="h2"
                   />
                 </div>
               )}
             </td>
             <td class="o-50 tc f7 ttu">
-              {project.data.tags.map((tag, index) => (
+              {project.tags.map((tag, index) => (
                 <Fragment>
                   {index !== 0 && ", "}
                   <span>{tag}</span>
                 </Fragment>
               ))}
             </td>
-            <td class="o-50 tc f7">{project.data.year}</td>
-            <td class="o-50 tc f7">{project.data.status}</td>
+            <td class="o-50 tc f7">{project.year}</td>
+            <td class="o-50 tc f7">{project.status}</td>
           </tr>
         ))
       }
