@@ -23,12 +23,12 @@ const { projects } = Astro.props;
     </thead>
     <tbody>
       <!-- onclick={`window.open('${project.data.url}', '_blank')`} -->
-      <!-- onclick={`window.location.href = '/projects/${project.slug}'`} -->
+      <!-- onclick={`window.location.href = '/project/${project.slug}'`} -->
       {
         projects.map((project) => (
           <tr
             class="bb b--black-80 hover-bg-black-05 pointer"
-            onclick={`window.open('${project.data.url}', '_blank')`}
+            onclick={`window.location.href = '/project/${project.slug}'`}
           >
             {/* <td class="pa3 w3">
               {project.icon && (
@@ -73,7 +73,7 @@ const { projects } = Astro.props;
                 </div>
               )}
             </td>
-            <td class="o-50 tc f7 ttu">
+            <td class="tc f7 ttu">
               {project.data.tags.map((tag, index) => (
                 <Fragment>
                   {index !== 0 && ", "}
@@ -81,8 +81,8 @@ const { projects } = Astro.props;
                 </Fragment>
               ))}
             </td>
-            <td class="o-50 tc f7">{project.data.year}</td>
-            <td class="o-50 tc f7">{project.data.status}</td>
+            <td class="tc f7">{project.data.year}</td>
+            <td class="tc f7">{project.data.status}</td>
           </tr>
         ))
       }

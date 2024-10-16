@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import ProjectsTable from "../components/ProjectsTable.astro";
 import { getCollection } from "astro:content";
+
 const allProjects = await getCollection("projects");
 const projects = allProjects.filter(
   (project) => !project.data.tags.includes("client") && !project.data.hidden
@@ -10,6 +11,23 @@ const projects = allProjects.filter(
 
 <Layout title="Projects - Jonathan Youngblood">
   <div class="pa2">
+    {
+      (() => {
+        const allTags = new Set();
+        projects.forEach(project => {
+          project.data.tags.forEach(tag => allTags.add(tag));
+        });
+        return (
+          <div class="mb3 flex flex-wrap" style="gap: 0.5rem;">
+            <a href="/projects" class="f7 ba b--black-80 bg-black-80 white br2 pv2 ph3 no-underline ttu">All</a>
+            {Array.from(allTags).sort().map(t => (
+              <a href={`/projects/${t}`} class="f7 ba b--black-80 br2 pv2 ph3 hover-bg-white no-underline ttu">{t}</a>
+            ))}
+          </div>
+        );
+      })()
+    }
+
     <ProjectsTable projects={projects} />
   </div>
 </Layout>

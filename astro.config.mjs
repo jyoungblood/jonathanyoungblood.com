@@ -4,5 +4,11 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx()]
+  integrations: [mdx()],
+  routes: [
+    {
+      path: '/projects/[tag]',
+      component: './src/pages/projects.astro'
+    }
+  ]
 });

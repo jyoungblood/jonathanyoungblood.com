@@ -1,0 +1,66 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectsTable from "../../components/ProjectsTable.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const allProjects = await getCollection("projects");
+  const allTags = new Set();
+  allProjects.forEach((project) => {
+    project.data.tags.forEach((tag) => allTags.add(tag));
+  });
+
+  return Array.from(allTags).map((tag) => ({
+    params: { tag },
+    props: { tag },
+  }));
+}
+
+const { tag } = Astro.props;
+
+const allProjects = await getCollection("projects");
+const projects = allProjects
+  .filter(
+    (project) => !project.data.tags.includes("client") && !project.data.hidden
+  )
+  .sort((a, b) => a.data.sort_order - b.data.sort_order);
+
+const filteredProjects = projects.filter((project) =>
+  project.data.tags.includes(tag)
+);
+---
+
+<Layout title={`Projects - ${tag} - Jonathan Youngblood`}>
+  <div class="pa2">
+    {
+      (() => {
+        const allTags = new Set();
+        projects.forEach((project) => {
+          project.data.tags.forEach((tag) => allTags.add(tag));
+        });
+        return (
+          <div class="mb3 flex flex-wrap" style="gap: 0.5rem;">
+            <a
+              href="/projects"
+              class="f7 ba b--black-80 br2 pv2 ph3 hover-bg-white no-underline ttu"
+            >
+              All
+            </a>
+            {Array.from(allTags)
+              .sort()
+              .map((t) => (
+                <a
+                  href={`/projects/${t}`}
+                  class={`f7 ba b--black-80 br2 pv2 ph3 no-underline ttu ${tag === t ? "bg-black-80 white" : "hover-bg-white"}`}
+                >
+                  {t}
+                </a>
+              ))}
+          </div>
+        );
+      })()
+    }
+
+    <ProjectsTable projects={filteredProjects} />
+  </div>
+</Layout>
