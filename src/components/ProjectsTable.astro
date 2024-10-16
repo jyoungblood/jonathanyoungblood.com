@@ -28,7 +28,7 @@ const { projects } = Astro.props;
         projects.map((project) => (
           <tr
             class="bb b--black-80 hover-bg-black-05 pointer"
-            onclick={`window.location.href = '/project/${project.slug}'`}
+            onclick={`window.open('${project.data.url}', '_blank')`}
           >
             {/* <td class="pa3 w3">
               {project.icon && (
